@@ -1,5 +1,8 @@
+*.l[ao]
+
 # http://www.gnu.org/software/automake
 
+Makefile
 Makefile.in
 /ar-lib
 /mdate-sh
@@ -9,6 +12,8 @@ Makefile.in
 
 # http://www.gnu.org/software/autoconf
 
+config.log
+config.status
 /autom4te.cache
 /autoscan.log
 /autoscan-*.log
@@ -26,7 +31,11 @@ Makefile.in
 
 # https://www.gnu.org/software/libtool/
 
+libtool
+/.deps
+/.libs
 /ltmain.sh
+/m4
 
 # http://www.gnu.org/software/texinfo
 
