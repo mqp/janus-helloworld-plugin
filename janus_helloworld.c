@@ -1,3 +1,4 @@
+#include <jansson.h>
 #include <plugins/plugin.h>
 #include <debug.h>
 
