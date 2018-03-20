@@ -32,8 +32,8 @@ config.status
 # https://www.gnu.org/software/libtool/
 
 libtool
-/.deps
-/.libs
+.deps
+.libs
 /ltmain.sh
 /m4
 
