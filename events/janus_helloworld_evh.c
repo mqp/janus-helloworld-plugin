@@ -20,6 +20,7 @@ const char *janus_helloworld_evh_get_name(void);
 const char *janus_helloworld_evh_get_author(void);
 const char *janus_helloworld_evh_get_package(void);
 void janus_helloworld_evh_incoming_event(json_t *event);
+json_t *janus_helloworld_evh_handle_request(json_t *request);
 
 static janus_eventhandler janus_helloworld_evh =
   JANUS_EVENTHANDLER_INIT(.init = janus_helloworld_evh_init,
@@ -32,6 +33,7 @@ static janus_eventhandler janus_helloworld_evh =
                           .get_author = janus_helloworld_evh_get_author,
                           .get_package = janus_helloworld_evh_get_package,
                           .incoming_event = janus_helloworld_evh_incoming_event,
+                          .handle_request = janus_helloworld_evh_handle_request,
                           .events_mask = JANUS_EVENT_TYPE_ALL
                           );
 
@@ -80,4 +82,8 @@ const char *janus_helloworld_evh_get_package(void) {
 void janus_helloworld_evh_incoming_event(json_t *event) {
   int type = json_integer_value(json_object_get(event, "type"));
   JANUS_LOG(LOG_VERB, "Got an event: type %d.\n", type);
+}
+
+json_t *janus_helloworld_evh_handle_request(json_t *request) {
+  return json_object();
 }
