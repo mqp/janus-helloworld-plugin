@@ -4,7 +4,7 @@ It was a big pain in the butt to figure out how to independently build [plugins]
 
 The plugins/ directory contains a simple plugin, and the events/ directory contains a simple event handler. You can build them both with `make` at the top level, or build them individually in their respective directories.
 
-Note that the samples given are compatible with the most recent version of Janus (currently 0.4.3). They may require slight modification to work correctly with older versions; for example, Ubuntu 18.04 packages [version 0.2.6][].
+**The samples given are compatible with an old version of Janus (0.4.3). They will likely require modification to work correctly with newer versions.** However, the build process and general plugin structure AFAIK has stayed the same.
 
 ``` shell
 ./bootstrap
